@@ -378,7 +378,6 @@ form {
 	grid-row-gap: 0px; 
 	place-items: center;
 	text-align: center;
-	display: none;
 }
 
 #contact--form-back {
