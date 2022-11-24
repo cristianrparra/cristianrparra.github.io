@@ -395,7 +395,7 @@ header {
 	grid-template-columns: 1fr repeat(2, 400px) 1fr; 
 	grid-template-rows: 3fr repeat(4, 100px) 2fr; 
 	grid-column-gap: 0px;
-	grid-row-gap: 0px; 
+	grid-row-gap: 0px;
 	position: relative;
 	top: 100px;
 }
@@ -417,7 +417,7 @@ header {
 
 #contact-vid {
 	grid-area: 3 / 3 / 6 / 4;
-	place-self: center;
+	z-index: -1;
 }
 
 #contact-form {
