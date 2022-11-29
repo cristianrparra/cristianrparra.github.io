@@ -15,3 +15,5 @@ exitButton.addEventListener('click', () => {
 	contactForm.style.display = 'none';
 
 });
+
+const contactSection = document.getElementById('con')
