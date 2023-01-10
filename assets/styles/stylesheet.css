@@ -228,7 +228,6 @@ header {
 	grid-column-gap: 0px;
 	grid-row-gap: 0px; 
 	place-items: center;
-	margin-top: 25px;
 }
 
 .profile--pic-background {
@@ -540,6 +539,18 @@ footer p {
 @keyframes footer-animation {
    from { bottom: -80px; }
    to { bottom: 0; }
+}
+
+/* Responsiveness */
+
+@media (min-width: 601px) {
+	
+	.profile--pic-area {
+	
+		margin-top: 50px;
+	
+	}
+
 }
 
 @media (max-width: 600px) {
