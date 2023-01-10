@@ -19,8 +19,14 @@ main {
 }
 
 section {
-	padding: 30px;
+	padding: 0 20px;
 	scroll-snap-align: center;
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
 }
 
 .section-heading {
@@ -29,6 +35,8 @@ section {
 	font-size: 32px;
 	font-family: 'Share Tech Mono', monospace;
 	font-weight: 400;
+	place-self: center;
+	width: 100%;
 }
 
 .material-symbols-outlined {
@@ -51,22 +59,22 @@ header {
    left: 0px;
    background: white;
    height: 100px;
-   width: 100%;
+	width: 100%;
    z-index: 10000;
-	display: grid;
-	align-items: center;
 	box-shadow: 0px 0px 10px #fff;
+	display: flex;
+	justify-content: center;
 }
 
-.main-nav {
+#main-nav {
 	display: grid; 
 	grid-template-columns: 1fr 2fr 1fr; 
 	grid-template-rows: 1fr; 
-	grid-column-gap: 0px;
-	grid-row-gap: 0px; 
-	align-items: center;
-	padding: 0 30px;
+	padding: 0 20px;
+	width: 100%;
+	place-items: center;
 }
+
 
 #logo {
 	font-size: 42px;
@@ -75,14 +83,7 @@ header {
 	color: #000;
 	text-decoration: none;
 	text-align: center;
-}
-
-#more-link {
-	text-align: right;
-}
-
-#more-link:visited {
-	color: #61677c;
+	grid-area: 1 / 2 / 2 / 3;
 }
 
 #nav-button {
@@ -92,32 +93,6 @@ header {
 	background: -webkit-linear-gradient(skyblue, hotpink);
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
-}
-
-#nav-button:hover {
-	-webkit-text-fill-color: white;
-}
-
-.nav--button-icon {
-	justify-self: end;
-	font-size: 20px !important;
-	background: -webkit-linear-gradient(skyblue, hotpink);
-  	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-}
-
-#upwork-link {
-	display: none;
-}
-
-#nav--link-center {
-	text-align: center;
-}
-
-#nav--link-end {
-	justify-self: end;
-	margin-right: 30px;
-	text-transform: uppercase;
 }
 
 /* ANIMATIONS */
@@ -246,25 +221,14 @@ header {
 
 /* HERO SECTION */
 
-#hero {
-	height: 100vh;
-	display: grid; 
-	grid-template-columns: repeat(3, 1fr); 
-	grid-template-rows: repeat(9, 1fr); 
-	grid-column-gap: 0px;
-	grid-row-gap: 0px; 
-	place-items: center;
-	padding-top: 50px;
-}
-
 .profile--pic-area {
-	grid-area: 3 / 1 / 6 / 4;
 	display: grid;
 	grid-template-columns: 1fr 300px 1fr; 
 	grid-template-rows: 300px; 
 	grid-column-gap: 0px;
 	grid-row-gap: 0px; 
 	place-items: center;
+	margin-top: 25px;
 }
 
 .profile--pic-background {
@@ -335,24 +299,14 @@ header {
 /* SERVICES SECTION */
 
 #services {
- 	height: sum(100vh - 100px);
-	display: grid; 
-	grid-template-columns: repeat(4, 1fr); 
-	grid-template-rows: repeat(2, 1fr) 3fr; 
-	grid-column-gap: 0px;
-	grid-row-gap: 0px;
-}
-
-#services-heading {
-	grid-area: 2 / 1 / 3 / 5;
-	margin-top: 60px;
-	align-self: center;
+	column-gap: 20px;
+	justify-content: center;
 }
 
 .service {
 	text-align: center;
-	margin: 0 10px;
-	grid-row: 3;
+	max-width: 270px;
+	width: 100%;
 }
 
 .service h3 {
@@ -374,62 +328,26 @@ header {
 /* ABOUT */
 
 #about {
-	display: grid; 
-	grid-template-columns: 1fr repeat(2, 300px) 1fr; 
-	grid-template-rows: 3fr 100px 300px 2fr; 
-	grid-column-gap: 0px;
-	grid-row-gap: 0px; 
-	height: 100vh;
+	column-gap: 30px;
 }
 
-#about p {
-	padding: 10px;
+#about div {
 	text-align: justify;
-}
-
-#about-heading {
-	grid-area: 2 / 2 / 3 / 4;
-}
-
-#about--para-1 {
-	grid-area: 3 / 2 / 4 / 3;
-}
-
-#about--para-2 {
-	grid-area: 3 / 3 / 4 / 4;
+	max-width: 315px;
+	width: 100%;
 }
 
 /* CONTACT */
 
 #contact {
-	height: 100vh;
-	display: grid; 
-	grid-template-columns: repeat(2, 1fr); 
-	grid-template-rows: 2fr 1fr repeat(4, 75px) repeat(2, 1fr); 
-	grid-column-gap: 0px;
-	grid-row-gap: 0px; 
-	padding: 0px;
+	height: 100%;
+	column-gap: 30px;
 }
 
-#contact-heading {
-	grid-area: 2 / 1 / 3 / 3;
-	place-self: center;
-}
-
-#my-phone {
-	grid-area: 3 / 1 / 5 / 2;
+#my-phone, #my-email {
 	text-align: right;
 	margin-right: 50px;
-}
-
-#my-email {
-	grid-area: 5 / 1 / 7 / 2;
-	text-align: right;
-	margin-right: 50px;
-}
-
-#contact-vid, #overlay {
-	grid-area: 3 / 2 / 7 / 3;
+	width: 100%;
 }
 
 #contact-vid {
@@ -470,7 +388,7 @@ header {
 }
 
 #contact--form-exit {
-	 grid-area: 2 / 3 / 3 / 4;
+	grid-area: 2 / 3 / 3 / 4;
 }
 
 #contact--form-heading {
@@ -562,27 +480,27 @@ form button, button {
 	box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
 	transition: all 0.2s ease-in-out;
 	cursor: pointer;
-font-weight: 600;
+	font-weight: 600;
 }
 
 form button:hover, button:hover {
-box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
-	}
+	box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
 
 form button:active, button:active {
-box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+	box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
 
 form button.unit {
-border-radius: 8px;
-line-height: 0;
-width: 48px;
-height: 48px;
-display: inline-flex;
-justify-content: center;
-align-items: center;
-margin: 0 8px;
-font-size: 19.2px;
+	border-radius: 8px;
+	line-height: 0;
+	width: 48px;
+	height: 48px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 8px;
+	font-size: 19.2px;
 }
 
 .submit {
@@ -592,17 +510,91 @@ font-size: 19.2px;
 
 /* FOOTER */
 
-footer {
-	background: -webkit-linear-gradient(black, white);
-	text-align: center;
-	height: 100px;
-	display: grid;
-}
-
 footer p {
 	color: black;
-	place-self: center;
 	position: relative;
 	top: 10px;
 }
 
+#footer {
+	height: 80px;
+	background: -webkit-linear-gradient(black, white);
+	text-align: center;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: #333;
+	display: grid;
+	place-content: center;
+
+   /* Add the animation */
+   animation: footer-animation 1s;
+
+  /* Initially hide the footer */
+  visibility: hidden;
+}
+
+
+   /* Add the keyframes for the animation */
+@keyframes footer-animation {
+   from { bottom: -80px; }
+   to { bottom: 0; }
+}
+
+@media (max-width: 600px) {
+
+	body {
+  		overflow: visible;
+	}
+	
+	main {
+		overflow-y: scroll;
+		overflow-x: hidden;
+  		scroll-snap-points-y: none;
+		scroll-snap-type: none;
+	}
+	
+	#contact-cta {
+		position: fixed;
+		bottom: 40px;
+		right: 20px;
+	}
+	
+	#lp--hero-text {
+		font-size: 18px;
+	}
+	
+	#contact-cta {
+		box-shadow: 0px 1px 6px #fff;
+	}
+	
+	#contact {
+		margin-bottom: 100px;
+		margin-top: -150px;
+	}
+
+	#my-phone, #my-email {
+		text-align: center;
+		margin-right: 0px;
+	}
+	
+	#contact-info {
+		margin-bottom: 30px;
+	}
+	
+}
+
+@media (max-width: 430px) {
+	
+	textarea, input, .submit {
+		position: relative;
+		left: 24px;
+	}
+	
+	#contact--form-exit {
+		position: relative;
+		right: 12px;
+	}
+	
+}
