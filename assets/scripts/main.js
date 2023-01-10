@@ -1,4 +1,6 @@
-const contactButton = document.getElementById('contact--form-button');
+/* Open and Close Contact Form */
+
+const contactButton = document.getElementById('contact-cta');
 	
 const exitButton = document.getElementById('contact--form-exit');
 	
@@ -15,5 +17,3 @@ exitButton.addEventListener('click', () => {
 	contactForm.style.display = 'none';
 
 });
-
-const contactSection = document.getElementById('con')
