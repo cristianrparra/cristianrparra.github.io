@@ -2,7 +2,6 @@
 
 html {
   	background: black;
-	max-width: 1600px;
 }
 
 body {
@@ -17,6 +16,7 @@ main {
   	height: 100vh;
   	scroll-snap-points-y: repeat(100vh);
    	scroll-snap-type: y mandatory;
+	max-width: 1600px;
 }
 
 section {
