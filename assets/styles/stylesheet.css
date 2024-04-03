@@ -9,7 +9,6 @@ body {
   	color: #FFF;
 	height: 100vh;
   	overflow: hidden;
-	max-width: 1600px;
 }
 
 main {
@@ -17,6 +16,7 @@ main {
   	height: 100vh;
   	scroll-snap-points-y: repeat(100vh);
    scroll-snap-type: y mandatory;
+	max-width: 1600px;
 }
 
 section {
