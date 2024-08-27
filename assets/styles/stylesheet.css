@@ -2,6 +2,8 @@
 
 html {
   	background: black;
+	max-width: 1600px;
+    	margin: 0 auto;
 }
 
 body {
@@ -17,9 +19,12 @@ main {
   	scroll-snap-points-y: repeat(100vh);
    	scroll-snap-type: y mandatory;
 	max-width: 1600px;
+	margin: 0 auto;
 }
 
 section {
+	max-width: 100%;
+    	width: 100%;
 	padding: 0 20px;
 	scroll-snap-align: center;
 	height: 100vh;
