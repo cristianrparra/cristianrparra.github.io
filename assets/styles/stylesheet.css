@@ -12,10 +12,12 @@ body {
 }
 
 main {
-	overflow: scroll;
-  	height: 100vh;
-  	scroll-snap-points-y: repeat(100vh);
-   	scroll-snap-type: y mandatory;
+	margin: 0 auto;  /* Center the main content horizontally */
+    	max-width: 1600px;  /* Constrain the max width */
+    	overflow: scroll;
+    	height: 100vh;
+    	scroll-snap-points-y: repeat(100vh);
+    	scroll-snap-type: y mandatory;
 }
 
 section {
